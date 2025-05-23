@@ -8,7 +8,7 @@ Hotel adalah sebuah tempat untuk berlibur ataupun tempat untuk tinggal sementara
 Bagaimana hotel dapat memprediksi lebih awal apakah sebuah reservasi akan dibatalkan atau tidak, sehingga manajemen dapat:
 
 1. Menetapkan strategi overbooking dan harga yang tepat
-2. Melakukan intervensi (reminder, penawaran Non-Refund, upsell) pada booking berisiko tinggi
+2. Melakukan intervensi (reminder, kebijakan Non-Refund, upsell) pada booking berisiko tinggi
 3. Mengurangi kerugian pendapatan akibat pembatalan mendadak
 
 ## Apa yang ingin dicapai dari Project ini?
