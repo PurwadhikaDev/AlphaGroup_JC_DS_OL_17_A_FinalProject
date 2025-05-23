@@ -12,7 +12,8 @@ feature_names = [
     'previous_bookings_not_canceled', 'booking_changes', 'agent', 'company',
     'required_car_parking_spaces', 'total_of_special_requests', 'adr',
     'market_segment', 'distribution_channel', 'customer_type', 'country',
-    'total_stay_duration', 'total_expense', 'total_stay', 'total_spending'
+    'total_stay_duration', 'total_expense', 'total_stay', 'total_spending',
+    'room_type_change','deposit_type'
 ]
 
 # Sidebar untuk input user
@@ -32,6 +33,7 @@ def user_input_features():
     data['company'] = st.sidebar.number_input('Company Code', 0, 600, 0)
     data['required_car_parking_spaces'] = st.sidebar.number_input('Car Parking Spaces', 0, 5, 0)
     data['total_of_special_requests'] = st.sidebar.number_input('Total Special Requests', 0, 5, 0)
+    data['room_type_change'] = st.sidebar.number_input('Room Type Change', 0, 1, 0)
     data['total_stay_duration'] = data['stays_in_weekend_nights'] + data['stays_in_week_nights']
     data['adr'] = st.sidebar.number_input('Average Daily Rate', 0.0, 10000.0, 100.0)
     data['total_expense'] = data['adr'] * data['total_stay_duration']
@@ -40,6 +42,7 @@ def user_input_features():
     data['market_segment'] = st.sidebar.selectbox('Market Segment', ['Online TA', 'Offline TA/TO', 'Direct', 'Corporate'])
     data['distribution_channel'] = st.sidebar.selectbox('Distribution Channel', ['TA/TO', 'Direct', 'Corporate'])
     data['customer_type'] = st.sidebar.selectbox('Customer Type', ['Transient', 'Contract', 'Transient-Party', 'Group'])
+    data['deposit_type'] = st.sidebar.selectbox('Deposit Type', ['Non Deposit', 'Non Refund', 'Refundable'])
     data['country'] = st.sidebar.selectbox(
         'Country',
         ['PRT', 'GBR', 'USA', 'ESP', 'FRA', 'DEU', 'ITA', 'IRL', 'NLD', 'BEL', 'BRA', 'Other']  # Ganti sesuai daftar country pada datamu
